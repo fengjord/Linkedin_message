@@ -5,10 +5,8 @@ from langchain.chains import LLMChain
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.agents import AgentType
-import os
 
 load_dotenv()
-api_key = os.environ.get("OPENAI_API_KEY")
 
 def generate_linkedin_message(connection, myname,name, position, company):
     llm = OpenAI(temperature=0.6)
